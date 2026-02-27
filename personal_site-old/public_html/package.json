@@ -1,0 +1,11 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-1.11.0.min.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.*'"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Developer Thomas Lewis</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="lightbox/lightbox.css"  />
+</head>
+
+<body>
+<header>
+	<div id="headerInner">
+		<div class="logo">
+			Tom Lewis
+			<div class="logoSub">Developer</div>
+
+			<a class="header_link" href="/" target="blank">resume</a>
+		</div>
+	</div>
+</header>
+
+<h1 class="heading">Projects</h1>
+
+<div class="projects" id="projects"></div>
+
+<footer>
+  <div class="container contact">
+     <div>tlewismedia@gmail.com</div>
+   </div>
+</footer>
+
+<script src="jquery-1.11.0.min.js"></script>
+<script src="lightbox/lightbox.js"></script>
+
+<script>
+	const renderThumb = image => {
+		return (`
+			<a href="img/prj/${ image.name }.${ image.ext === 'gif' ? 'gif' : 'jpg'}" data-lightbox="project" data-title="${ image.title }">
+				<img src="img/prj/${ image.name }-th.${ image.ext === 'gif' ? 'gif' : 'jpg'}" alt="${ image.name }">
+			</a>
+		`);
+	}
+
+	const renderTech = item => {
+		return (`<span class="tech_item">${ item }</span>`);
+	}
+
+	const buildProject = item => {
+		return (`
+			<section class="project">
+				<h2>${item.title}</h2>
+
+				<div class="project_body">
+					<div class="one_half">
+						<div class="lead">${item.lead}</div>
+
+						<div class="projDesc">${item.description}</div>
+
+						<div class="tech">${ item.tech ? item.tech.map( renderTech ).join(', ') : '' }</div>
+					</div>
+
+					<div class="one_half">${ item.images ? item.images.map( renderThumb ).join('') : '' }</div>
+				</div>
+			</section>
+		`)
+	}
+
+	const renderProjects = ( data ) => {
+		const html = data.projects.map(buildProject).join('');
+
+		let el = document.querySelector('#projects');
+
+		el.innerHTML = html;
+	}
+
+	fetch('projects.json')
+		.then( response => response.json())
+		.then( renderProjects );
+</script>
+
+
+</body>
+</html>

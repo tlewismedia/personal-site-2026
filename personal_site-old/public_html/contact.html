@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<?php include('header.php'); ?>
+<script src="_/js/jquery.validate.min.js" type="text/javascript"></script>
+	
+	<section id="contactMain">
+		
+			<h1>Keep in Touch!</h1>
+
+			<form class="generalForm" id="contactForm" name="ContactForm">
+				<table>
+					<tr>
+						<td><label for="fullName">Full Name</label></td>
+						<td><input id="fullName" name="fullName" placeholder="Your Name" required></td>
+					</tr>
+					<tr>
+						<td><label for="emailAddress"> Email</label></td>
+						<td><input id="emailAddress" placeholder="you@yourdomain.com" name="emailAddress" required></td>
+					</tr>
+					<tr>
+						<td><label for="subject"> Subject</label></td>
+						<td><input type="text" id="subject" name="subject" placeholder="subject" required></td>
+					</tr>
+					<tr>
+						<td><label for="message">Message</label></td>
+						<td><textarea  placeholder="Your message here..." name="message" id="message" required></textarea></td>
+					</tr>
+				</table> 
+
+				<div style="display:none">
+					<label for="sfield">Don't fill this if you're human*</label>
+					<input  type="text" name="sfield" id="sfield" class="inputField" />
+				</div>
+				
+				<div id="formFooter">
+					<input id="sendBtn" type="button" name="sendBtn"  value="Send">    
+
+					<div id="errorBox"></div>
+					<div id="successBox"></div>
+				</div>
+
+			</form>
+		<script>
+			$("#sendBtn").click(function() {          
+				var val = $("#contactForm").valid();
+				if (val) submitForm();
+			});
+
+			function submitForm(){
+
+				$('#successBox').text("sending your message ...");
+
+				postData = $('#contactForm').serialize();
+
+				$.ajax({
+					type: "POST",
+					url: "mailer.php",
+					data: postData
+				}).done(function(data) {
+
+					switch (data.stat) {
+						case 0:
+						$('#errorBox').text("server error: "+data.msg);
+						$('#successBox').text("");
+
+						break;
+						case 1:
+						$('#errorBox').text("");
+						$('#successBox').text("Success - Your message was sent!");
+						$('#fullName').val("");
+						$('#emailAddress').val("");
+						$('#subject').val("");
+						$('#message').val("");
+
+						break;
+						default:
+						$('#errorBox').text("server error: "+data.msg);
+						$('#successBox').text("");
+
+						break;
+			} //end switch
+		}).fail(function(data){
+			$('#errorBox').text("server error, try again later");
+			$('#successBox').text("");
+
+			}); //end ajax
+
+	}
+	</script>
+</section> 
+
+
+<script src="http://localhost:35729/livereload.js"></script>
+
+
+</body>
+</html>

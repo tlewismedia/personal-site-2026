@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { TopSection } from './sections/TopSection'
 import { ArtDesignSection } from './sections/ArtDesignSection'
 import { DigitalHarborSection } from './sections/DigitalHarborSection'
@@ -7,10 +7,98 @@ import { RicochetSection } from './sections/RicochetSection'
 import { PrincicplesSection } from './sections/PrincicplesSection'
 import { HowHelpSection } from './sections/HowHelpSection'
 import { FreelanceSection } from './sections/FreelanceSection'
+import { ProjectPage } from './pages/ProjectPage'
+import {
+  decodeHtmlEntities,
+  slugify,
+  type ProjectRecord,
+  type RawProjectRecord,
+} from './types/projects'
 import './App.css'
 
+type RouteState =
+  | { type: 'home' }
+  | { type: 'project'; slug: string };
+
+const parseRouteFromHash = (hash: string): RouteState => {
+  const prefix = '#/projects/';
+
+  if (hash.startsWith(prefix)) {
+    const slug = decodeURIComponent(hash.slice(prefix.length));
+    return { type: 'project', slug };
+  }
+
+  return { type: 'home' };
+};
+
+const mapRawProject = (project: RawProjectRecord): ProjectRecord => {
+  const title = decodeHtmlEntities(project.title ?? 'Untitled Project');
+
+  return {
+    slug: slugify(title),
+    title,
+    lead: decodeHtmlEntities(project.lead ?? ''),
+    description: decodeHtmlEntities(project.description ?? ''),
+    tech: (project.tech ?? []).map((item) => decodeHtmlEntities(item)),
+    images: project.images ?? [],
+  };
+};
+
 function App() {
+  const [route, setRoute] = useState<RouteState>(() =>
+    parseRouteFromHash(window.location.hash)
+  );
+  const [projects, setProjects] = useState<ProjectRecord[]>([]);
+  const [isLoadingProjects, setIsLoadingProjects] = useState(true);
+
   useEffect(() => {
+    const onHashChange = () => {
+      setRoute(parseRouteFromHash(window.location.hash));
+    };
+
+    window.addEventListener('hashchange', onHashChange);
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const loadProjects = async () => {
+      try {
+        const response = await fetch('/projects.json');
+        const data = (await response.json()) as { projects?: RawProjectRecord[] };
+
+        if (!isCancelled) {
+          const mappedProjects = (data.projects ?? []).map(mapRawProject);
+          setProjects(mappedProjects);
+        }
+      } catch (error) {
+        console.error('Failed to load projects.json', error);
+      } finally {
+        if (!isCancelled) {
+          setIsLoadingProjects(false);
+        }
+      }
+    };
+
+    void loadProjects();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  const projectsBySlug = useMemo(() => {
+    return new Map(projects.map((project) => [project.slug, project]));
+  }, [projects]);
+
+  useEffect(() => {
+    if (route.type !== 'home') {
+      return;
+    }
+
     const sections = Array.from(document.querySelectorAll('section'));
     const scrollBlocks = sections
       .slice(1)
@@ -36,7 +124,43 @@ function App() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [route.type]);
+
+  if (route.type === 'project') {
+    const selectedProject = projectsBySlug.get(route.slug);
+
+    if (!selectedProject) {
+      return (
+        <main className="project-page">
+          <div className="project-page-inner">
+            <button
+              type="button"
+              className="project-back-button"
+              onClick={() => {
+                window.location.hash = '#/';
+              }}
+            >
+              Back to main page
+            </button>
+            <article className="project-detail-card">
+              <p className="project-detail-kicker">Project</p>
+              <h1>Project not found</h1>
+              <p>The requested project link is unavailable.</p>
+            </article>
+          </div>
+        </main>
+      );
+    }
+
+    return (
+      <ProjectPage
+        project={selectedProject}
+        onBack={() => {
+          window.location.hash = '#/';
+        }}
+      />
+    );
+  }
 
   return (
     <>
@@ -47,7 +171,7 @@ function App() {
       <FreelanceSection />
       <RicochetSection />
       <DigitalHarborSection />
-      <ProjectExplorerSection />
+      <ProjectExplorerSection projects={projects} isLoading={isLoadingProjects} />
     </>
   )
 }

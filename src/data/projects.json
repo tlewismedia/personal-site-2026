@@ -1,0 +1,84 @@
+{
+	"projects": [
+		{
+			"title": "SCORM Course &shy;Building System",
+			"lead": "Course Building System for Luxury Car Company",
+			"description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",
+			"tech": ["Vue", "Vuex", "Vue-Router", "Javascript", "Ruby", "Cypress", "SASS", "Invision Freehand", "Invision Studio", "Prismic"],
+			"images":[
+				{"name":"sc-wireframe1", "ext":"gif", "title":"Initial Concept Wireframe 1"},
+				{"name":"sc-wireframe2", "ext":"gif", "title":"Initial Concept Wireframe 2"},
+				{"name":"sc-wireframe3", "ext":"gif", "title":"Initial Concept Wireframe 3"},
+				{"name":"sc-spread", "title":"Early Concepts, Content Block Variations"}
+			]
+		},
+		{
+			"title": "Explore EMC",
+			"lead": "3D Product Explorer Application for Rhode Schwarz",
+			"description": "Rhode Schwarz, producer of electronic test chambers and equipment wanted an application that offers and immersive experience to explore their products. We leveraged the SketchFab 3D and extended it to allow more interface views for detailed product information. Lead implementation and advised on 3D asset production. Connected headless CMS for convenient content editing",
+			"tech": ["Web Components", "Sketchfab", "Javascript", "Blender", "Photoshop", "Prismic"],
+			"images":[
+				{"name":"rs-screen1", "title":"EMC Screenshot 1"},
+				{"name":"rs-screen3", "title":"EMC Screenshot 2"},
+				{"name":"rs-screen4", "title":"EMC Screenshot 3"},
+				{"name":"rs-screen5", "title":"EMC Screenshot 4"}
+			]
+		},
+		{
+			"title": "Augmented Reality Tradeshow Installation",
+			"lead": "Interactive AR for Georgia Pacific",
+			"description": "Client needed to demonstrate different construction layers as animations. Users would hold a card beneath a camera and an animation would start on the main screen allowing inspection from multiple angles. Project was built in Unity and targeted for iPhone. Deployed to devices via TestFlight. Involved with debugging application, advising on asset creation, and testing/deployment system.",
+			"tech": ["Unity", "XCode", "TestFlight", "Vuforia", "C#"],
+			"images":[
+				{"name":"gp-ar1", "title":"Georgia Pacific Tradeshow 1"},
+				{"name":"gp-ar2", "title":"Georgia Pacific Tradeshow 2"}
+			]
+		},
+		{
+			"title": "DensShield microsite",
+			"lead": "DensShield microsite for Georgia Pacific",
+			"description": "Single page product overview with animations. Custom store locator.",
+			"tech": ["Greensock", "Javascript", "Google Maps API"],
+			"images":[
+				{"name":"ds-home1", "title":"DensSheild Home 1"},
+				{"name":"ds-home2", "title":"DensSheild Home 2"},
+				{"name":"ds-home3", "title":"DensSheild Home 3"},
+				{"name":"ds-home4", "title":"DensSheild Home 4"},
+				{"name":"ds-map", "title":"DensSheild Store Locator"}
+			]
+		},
+		{
+			"title": "Baja Weddings and Events",
+			"lead": "Website for Event Planning Company",
+			"description": "Responsible for custom graphics, logo, design, and development. Responsive layout.",
+			"tech": ["HTML", "CSS", "Javascript", "PHP", "Wordpress"],
+			"images":[
+				{"name":"baja-events-mobile", "title":"Baja Events Mobile"},
+				{"name":"baja-events-med", "title":"Baja Events Medium"},
+				{"name":"baja-events-large", "title":"Baja Events Medium Large"}
+			]
+		},
+		{
+			"title": "Top Secret Hair",
+			"lead": "E-Commerce Website for Hair Accessory Company.",
+			"description": "Logo refresh. Responsible for design and development. Custom artwork. Responsive design.",
+			"tech": ["Wordpress","Woo Commerce","Bootstrap","PHP","HTML","CSS","Javascript"],
+			"images":[
+				{"name":"ts1", "title":"Home Desktop"},
+				{"name":"ts2", "title":"Product Page"},
+				{"name":"ts3", "title":"Home Mobile"},
+				{"name":"ts4", "title":"Gallery"}
+			]
+		},
+		{
+			"title": "Writers Guild of America",
+			"lead": "Website for Writers Guild of America Pension Plan and Health Fund",
+			"description": "Responsible for design and development of static sections of site. 300+ pages of site architecture. Custom artwork and layouts. Info graphics.",
+			"tech": ["Wordpress","Woo Commerce","Bootstrap","PHP","HTML","CSS","Javascript"],
+			"images":[
+				{"name":"wga1", "title":"Home Page"},
+				{"name":"wga2", "title":"Benefits Page"}
+			]
+		}
+	]
+}

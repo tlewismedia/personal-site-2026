@@ -1,33 +1,49 @@
 export function DigitalHarborSection() {
   return (
-    <section className="digital-harbor-section">
-      <h2>Digital Harbor</h2>
-      <p>
-        Welcome to the digital harbor where ideas dock, evolve, and launch.
-        This section highlights experiments in web interaction, front-end
-        architecture, and thoughtful user experience design for modern products.
-      </p>
-      <p>
-        At Digital Harbor, I initially worked mostly as a front end developer,
-        but quickly started to take on many roles with opportunities to shape
-        the direction of the product. As the leader of the Builder Team, I was
-        responsible for designing and implementing a form-building
-        application-think Google Forms on steroids, with advanced collaborative
-        features. Again, the company recognized my design talents and I moved
-        beyond my original responsibilities. I designed and implemented a robust
-        theming system, transformed the product&apos;s usability, and expanded my
-        role into areas of product leadership. I led a UI/UX team that evolved
-        into a broader product team, collaborating with PMs and engineers to
-        refine our vision. I was actively involved in innovation meetings with
-        executives and stakeholders, always pushing for creative, impactful
-        solutions. Additionally, I initiated team exercises to foster a culture
-        of design thinking and experimentation.
-      </p>
-      <p>
-        Through it all, I&apos;ve realized that my greatest strength isn&apos;t choosing
-        between engineering and design-it&apos;s using both to craft products that
-        are as functional as they are compelling.
-      </p>
+    <section className="digital-harbor-section career-section">
+      <div className="career-header">
+        <h2>Digital Harbor</h2>
+        <p className="career-role">Product Team Lead, Full Stack Developer</p>
+        <p className="career-period">2020 - Present</p>
+      </div>
+
+      <div className="career-grid">
+        <p className="career-card">
+          Since 2020, I&apos;ve worked at Digital Harbor as Product Team Lead and
+          Full Stack Developer, helping shape Social Forms into a next-generation
+          collaborative form platform.
+        </p>
+        <p className="career-card">
+          I built scalable front-end architecture in Angular and a Nest.js
+          microservices backend, including NgRx state management for performance
+          and maintainability. I designed and implemented DesignKit and a
+          flexible theming/template system with real-time updates, plus an
+          advanced drag-and-drop layout engine with nesting and column controls.
+        </p>
+        <p className="career-card">
+          Beyond implementation, I led UX and product alignment through
+          wireframing, flow design, and usability guidance; established
+          Playwright and AI-assisted QA workflows; launched Storybook adoption
+          and component strategy; and mentored developers through code reviews,
+          pair programming, and engineering best practices.
+        </p>
+        <p className="career-card">
+          I also partnered closely with Product Management to refine user
+          stories, run usability assessments, and guide feature direction. As a
+          UX-focused technical lead, I helped align designers and engineers
+          around intuitive interaction patterns for flows, controls, templates,
+          and themes.
+        </p>
+      </div>
+
+      <ul className="career-tags" aria-label="Digital Harbor focus areas">
+        <li>Angular</li>
+        <li>Nest.js</li>
+        <li>NgRx</li>
+        <li>Playwright</li>
+        <li>Design Systems</li>
+        <li>Product Leadership</li>
+      </ul>
     </section>
   );
 }
