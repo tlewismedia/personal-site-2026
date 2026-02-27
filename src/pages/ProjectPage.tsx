@@ -28,31 +28,16 @@ export function ProjectPage({ project, onBack }: ProjectPageProps) {
           )}
 
           {project.images.length > 0 && (
-            <div className="project-image-grid">
+            <div className="project-carousel" aria-label="Project images">
               {project.images.map((image) => {
                 const extension = image.ext === 'gif' ? 'gif' : 'jpg';
                 const fullPath = `/img/prj/${image.name}.${extension}`;
-                const thumbPath = `/img/prj/${image.name}-th.${extension}`;
 
                 return (
-                  <a
-                    key={`${image.name}-${image.title}`}
-                    href={fullPath}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project-image-link"
-                    title="Open full image in a new tab"
-                  >
-                    <img
-                      src={thumbPath}
-                      alt={image.title}
-                      loading="lazy"
-                      onError={(event) => {
-                        event.currentTarget.src = fullPath;
-                      }}
-                    />
+                  <figure key={`${image.name}-${image.title}`} className="project-carousel-item">
+                    <img src={fullPath} alt={image.title} loading="lazy" />
                     <span>{image.title}</span>
-                  </a>
+                  </figure>
                 );
               })}
             </div>
