@@ -15,9 +15,11 @@ export function ProjectPage({ project, onBack }: ProjectPageProps) {
 
         <article className="project-detail-card">
           <p className="project-detail-kicker">Project</p>
-          <h1>{project.title}</h1>
-          <p className="project-detail-lead">{project.lead}</p>
-          <p>{project.description}</p>
+          <div className="project-title-block">
+            <h1>{project.title}</h1>
+            <p className="project-detail-lead">{project.lead}</p>
+          </div>
+          <p className="project-detail-description">{project.description}</p>
 
           {project.tech.length > 0 && (
             <ul className="project-tech-list" aria-label="Project technologies">

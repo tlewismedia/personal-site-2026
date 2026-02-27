@@ -67,7 +67,7 @@ function App() {
 
     const loadProjects = async () => {
       try {
-        const response = await fetch('/projects.json');
+        const response = await fetch(`${import.meta.env.BASE_URL}projects.json`);
         const data = (await response.json()) as { projects?: RawProjectRecord[] };
 
         if (!isCancelled) {
@@ -128,6 +128,29 @@ function App() {
 
   if (route.type === 'project') {
     const selectedProject = projectsBySlug.get(route.slug);
+
+    if (isLoadingProjects) {
+      return (
+        <main className="project-page">
+          <div className="project-page-inner">
+            <button
+              type="button"
+              className="project-back-button"
+              onClick={() => {
+                window.location.hash = '#/';
+              }}
+            >
+              Back to main page
+            </button>
+            <article className="project-detail-card">
+              <p className="project-detail-kicker">Project</p>
+              <h1>Loading project...</h1>
+              <p>Retrieving project data.</p>
+            </article>
+          </div>
+        </main>
+      );
+    }
 
     if (!selectedProject) {
       return (

@@ -1,6 +1,27 @@
 {
 	"projects": [
 		{
+			"title": "Next Generation Forms",
+			"lead": "Collaborative form authoring platform with advanced UX",
+			"description": "Traditional enterprise forms often feel tedious, anxiety-inducing, isolating, and boring for both builders and end users. We changed that with engaging UX, collaborative workflows, and more personal interaction patterns. Under the hood, this was a complex enterprise Angular application backed by Nest.js microservices and real-time interactions. My primary focus was the form builder itself: complex structures and layouts, robust state management, and a custom form logic builder. The result was the ability to create engaging form experiences so enterprise customers can make a stronger impression with users while still supporting complex workflows.",
+			"tech": ["Angular", "Nest.js", "NgRx", "TypeScript", "Design Systems", "Playwright"],
+			"images":[]
+		},
+		{
+			"title": "Product and UI/UX Leadership",
+			"lead": "Cross-functional product direction through design and engineering alignment",
+			"description": "Led UX efforts by producing wireframes, guiding design of application flows, layouts, and form controls, and mentoring developers and designers on usability best practices. While primarily leading with engineering, I also collaborated with Product Management to shape user stories, conduct usability assessments, and inform product direction. I mentored junior developers in clean, maintainable coding through code reviews, pair programming, and practical implementation standards. I designed and implemented DesignKit and a flexible theming and template system that enabled visually appealing, customizable forms with real-time updates, essentially a Canva-like experience for form building. I also set up and guided Storybook usage, developed component system strategy to align design and engineering, and automated story creation through orchestrated LLM-based workflows.",
+			"tech": ["Product Strategy", "UX Leadership", "Wireframing", "Storybook", "Usability Testing", "Mentorship"],
+			"images":[]
+		},
+		{
+			"title": "Conversational UI",
+			"lead": "Conversational help and intelligent guidance for complex workflows",
+			"description": "Developed a Conversational UI system for contextual help and dialog, paving the way for a cutting-edge, chat-like product experience. This included a performant custom animation engine using requestAnimationFrame techniques to deliver nuanced, expressive motion without sacrificing responsiveness. I also developed an Autofill feature that leverages LLM embeddings for intelligent form completion, helping users move through complex workflows with less friction.",
+			"tech": ["Accessibility", "ARIA", "Interaction Design", "Front-End Architecture", "Testing"],
+			"images":[]
+		},
+		{
 			"title": "SCORM Course &shy;Building System",
 			"lead": "Course Building System for Luxury Car Company",
 			"description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",

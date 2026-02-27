@@ -2,9 +2,7 @@ export function TopSection() {
   return (
     <section className="top-section">
       <div className="top-intro">
-        <div className="portrait-placeholder" role="img" aria-label="Portrait placeholder">
-          Portrait Placeholder
-        </div>
+        <img className="profile-image" src="/profile.jpg" alt="Tom Lewis portrait" />
         <h1>Hi, I&apos;m Tom Lewis.</h1>
         <p>
           I&apos;m a product-minded front-end engineer focused on building clean,
@@ -19,21 +17,36 @@ export function TopSection() {
         <div className="work-items-row">
           <article className="work-item">
             <i className="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
-            <h3>Form Builder</h3>
+            <h3>
+              <a className="work-item-link" href="#/projects/next-generation-forms">
+                Next Generation Forms
+              </a>
+            </h3>
           </article>
           <article className="work-item">
             <i className="fa-solid fa-compass-drafting" aria-hidden="true"></i>
-            <h3>Product and UI/UX Leadership</h3>
+            <h3>
+              <a
+                className="work-item-link"
+                href="#/projects/product-and-ui-ux-leadership"
+              >
+                Product and UI/UX Leadership
+              </a>
+            </h3>
           </article>
           <article className="work-item">
-            <i className="fa-solid fa-universal-access" aria-hidden="true"></i>
-            <h3>Assistive UI</h3>
+            <i className="fa-solid fa-comments" aria-hidden="true"></i>
+            <h3>
+              <a className="work-item-link" href="#/projects/conversational-ui">
+                Conversational UI
+              </a>
+            </h3>
           </article>
         </div>
       </div>
 
       <a className="scroll-to-projects-link" href="#projects-section">
-        Go to bottom projects section
+        more projects
       </a>
     </section>
   );
