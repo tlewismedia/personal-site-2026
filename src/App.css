@@ -9,6 +9,10 @@ html {
 }
 
 section {
+  min-height: 100svh;
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
   margin-bottom: 2.5rem;
   padding: 1.75rem;
   border: 1px solid #e1e1e1;
@@ -16,9 +20,61 @@ section {
   text-align: center;
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 2400ms ease, transform 2400ms ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-section > * {
+  opacity: 0;
+  animation: top-section-fade-in 2400ms ease forwards;
+}
+
+.top-section > *:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.top-section > *:nth-child(3) {
+  animation-delay: 440ms;
+}
+
+@keyframes top-section-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .top-section {
+  min-height: 100svh;
+  min-height: 100vh;
   display: grid;
   gap: 1.5rem;
+  align-content: center;
+}
+
+.principles-section {
+  min-height: 100svh;
+  min-height: 100vh;
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+.how-help-section {
+  min-height: 100svh;
+  min-height: 100vh;
+  display: grid;
+  gap: 1rem;
+  align-content: center;
 }
 
 .top-intro {
@@ -78,5 +134,23 @@ section {
 @media (max-width: 840px) {
   .work-items-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .top-section > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
