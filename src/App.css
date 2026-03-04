@@ -388,27 +388,151 @@ p {
   font-weight: 500;
 }
 
-.freelance-callouts {
-  width: min(100%, 980px);
+.freelance-section {
+  gap: 1rem;
+}
+
+.freelance-header {
+  width: min(100%, 900px);
   margin: 0 auto;
-  padding: 0;
-  list-style: none;
+  display: grid;
+  gap: 0.3rem;
+  justify-items: center;
+}
+
+.freelance-role {
+  margin: 0;
+  font-family: 'Sora', 'Avenir Next', sans-serif;
+  color: #d9fffa;
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+}
+
+.freelance-period {
+  margin: 0;
+  color: #b7ece4;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.freelance-summary {
+  width: min(100%, 840px);
+  max-width: 60ch;
+}
+
+.freelance-callouts {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-left: 1.15rem;
   text-align: left;
   color: var(--text-secondary);
   display: grid;
-  gap: 0.75rem;
+  gap: 0.62rem;
 }
 
 .freelance-callouts li {
-  padding: 0.95rem 1rem;
-  border: 1px solid rgba(82, 242, 217, 0.16);
-  border-radius: 12px;
-  background: rgba(4, 33, 38, 0.3);
   line-height: 1.6;
 }
 
-.freelance-callouts strong {
-  color: #dcfff9;
+.freelance-tools {
+  width: min(100%, 900px);
+  max-width: none;
+  margin: 0 auto;
+  color: #c8f8f1;
+  font-size: 0.94rem;
+  letter-spacing: 0.01em;
+}
+
+.ricochet-section {
+  gap: 1rem;
+}
+
+.ricochet-header {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.3rem;
+  justify-items: center;
+}
+
+.ricochet-role {
+  margin: 0;
+  font-family: 'Sora', 'Avenir Next', sans-serif;
+  color: #d9fffa;
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+}
+
+.ricochet-period {
+  margin: 0;
+  color: #b7ece4;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ricochet-summary {
+  width: min(100%, 840px);
+  max-width: 60ch;
+}
+
+.ricochet-highlights {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-left: 1.15rem;
+  text-align: left;
+  color: var(--text-secondary);
+  display: grid;
+  gap: 0.62rem;
+}
+
+.ricochet-highlights li {
+  line-height: 1.6;
+}
+
+.digital-harbor-section {
+  gap: 1rem;
+}
+
+.digital-harbor-header {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.3rem;
+  justify-items: center;
+}
+
+.digital-harbor-role {
+  margin: 0;
+  font-family: 'Sora', 'Avenir Next', sans-serif;
+  color: #d9fffa;
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+}
+
+.digital-harbor-period {
+  margin: 0;
+  color: #b7ece4;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.digital-harbor-summary {
+  width: min(100%, 840px);
+  max-width: 60ch;
+}
+
+.digital-harbor-highlights {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-left: 1.15rem;
+  text-align: left;
+  color: var(--text-secondary);
+  display: grid;
+  gap: 0.62rem;
+}
+
+.digital-harbor-highlights li {
+  line-height: 1.6;
 }
 
 .project-link-list {

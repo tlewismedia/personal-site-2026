@@ -1,40 +1,33 @@
 export function DigitalHarborSection() {
   return (
-    <section className="digital-harbor-section career-section">
-      <div className="career-header">
+    <section className="digital-harbor-section">
+      <div className="digital-harbor-header">
         <h2>Digital Harbor</h2>
-        <p className="career-role">Product Team Lead, Full Stack Developer</p>
-        <p className="career-period">2020 - Present</p>
+        <p className="digital-harbor-role">
+          Product Team Lead, Full Stack Developer
+        </p>
+        <p className="digital-harbor-period">2020 - Present</p>
       </div>
 
-      <div className="career-grid">
-        <p className="career-card">
-          Since 2020, I&apos;ve worked at Digital Harbor as Product Team Lead and
-          Full Stack Developer, helping shape Social Forms into a next-generation
-          collaborative form platform.
-        </p>
-        <p className="career-card">
-          I built scalable front-end architecture in Angular and a Nest.js
-          microservices backend, including NgRx state management for performance
-          and maintainability. I designed and implemented DesignKit and a
-          flexible theming/template system with real-time updates, plus an
-          advanced drag-and-drop layout engine with nesting and column controls.
-        </p>
-        <p className="career-card">
-          Beyond implementation, I led UX and product alignment through
-          wireframing, flow design, and usability guidance; established
-          Playwright and AI-assisted QA workflows; launched Storybook adoption
-          and component strategy; and mentored developers through code reviews,
-          pair programming, and engineering best practices.
-        </p>
-        <p className="career-card">
-          I also partnered closely with Product Management to refine user
-          stories, run usability assessments, and guide feature direction. As a
-          UX-focused technical lead, I helped align designers and engineers
-          around intuitive interaction patterns for flows, controls, templates,
-          and themes.
-        </p>
-      </div>
+      <p className="digital-harbor-summary">
+        Helped shape Social Forms into a collaborative, next-generation form
+        platform by leading across product, UX, and engineering.
+      </p>
+
+      <ul className="digital-harbor-highlights">
+        <li>
+          Built scalable front-end architecture in Angular with Nest.js
+          microservices and NgRx state management.
+        </li>
+        <li>
+          Designed and implemented DesignKit, theming/templates, and a complex
+          drag-and-drop builder with advanced layouts and real-time updates.
+        </li>
+        <li>
+          Led UX/product alignment through wireframing, usability assessments,
+          Storybook/component strategy, AI-assisted QA workflows, and mentoring.
+        </li>
+      </ul>
 
       <ul className="career-tags" aria-label="Digital Harbor focus areas">
         <li>Angular</li>
