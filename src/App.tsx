@@ -39,6 +39,7 @@ const mapRawProject = (project: RawProjectRecord): ProjectRecord => {
     title,
     lead: decodeHtmlEntities(project.lead ?? ''),
     description: decodeHtmlEntities(project.description ?? ''),
+    link: project.link ? decodeHtmlEntities(project.link) : undefined,
     tech: (project.tech ?? []).map((item) => decodeHtmlEntities(item)),
     images: project.images ?? [],
   };

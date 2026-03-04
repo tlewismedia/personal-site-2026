@@ -6,6 +6,12 @@ type ProjectPageProps = {
 };
 
 export function ProjectPage({ project, onBack }: ProjectPageProps) {
+  const projectLink = project.link
+    ? project.link.startsWith('http')
+      ? project.link
+      : `https://${project.link}`
+    : '';
+
   return (
     <main className="project-page">
       <div className="project-page-inner">
@@ -20,6 +26,13 @@ export function ProjectPage({ project, onBack }: ProjectPageProps) {
             <p className="project-detail-lead">{project.lead}</p>
           </div>
           <p className="project-detail-description">{project.description}</p>
+          {project.link && (
+            <p className="project-detail-link">
+              <a href={projectLink} target="_blank" rel="noreferrer">
+                View project demo
+              </a>
+            </p>
+          )}
 
           {project.tech.length > 0 && (
             <ul className="project-tech-list" aria-label="Project technologies">

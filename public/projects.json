@@ -22,6 +22,16 @@
 			"images":[]
 		},
 		{
+			"title": "Assistive UI",
+			"lead": "Component system for conversational guidance, tours, and contextual help",
+			"description": "Built a reusable component system for conversation-driven interfaces that supports help systems and guided UI tours. The interaction model uses tree-based dialog data so flows are structured, extensible, and easy to maintain. Motion is powered by performant requestAnimationFrame animations designed to feel expressive and humanistic, even in complex screens. The assistant can pin to scrollable interface regions for context-aware guidance or run as a free-floating layer for broader onboarding scenarios.",
+			"link": "assistive-ui-demo.tomlewis.dev",
+			"tech": ["React", "TypeScript", "Conversation Design", "UI Architecture", "requestAnimationFrame", "Animation Systems"],
+			"images":[
+				{"name":"assistive-ui", "title":"Assistive UI Demo"}
+			]
+		},
+		{
 			"title": "SCORM Course &shy;Building System",
 			"lead": "Course Building System for Luxury Car Company",
 			"description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",

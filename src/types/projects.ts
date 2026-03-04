@@ -9,6 +9,7 @@ export type ProjectRecord = {
   title: string;
   lead: string;
   description: string;
+  link?: string;
   tech: string[];
   images: ProjectImage[];
 };
@@ -17,6 +18,7 @@ export type RawProjectRecord = {
   title?: string;
   lead?: string;
   description?: string;
+  link?: string;
   tech?: string[];
   images?: ProjectImage[];
 };
