@@ -49,6 +49,7 @@ function App() {
   const [route, setRoute] = useState<RouteState>(() =>
     parseRouteFromHash(window.location.hash)
   );
+
   const [projects, setProjects] = useState<ProjectRecord[]>([]);
   const [isLoadingProjects, setIsLoadingProjects] = useState(true);
 
