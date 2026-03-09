@@ -3,6 +3,38 @@ export function TopSection() {
     <section className="top-section">
       <div className="top-intro">
         <img className="profile-image" src="/profile.jpg" alt="Tom Lewis portrait" />
+        <div className="profile-links" aria-label="Social and resume links">
+          <a
+            className="profile-link-icon"
+            href="https://www.linkedin.com/in/tlewismedia/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            data-tooltip="LinkedIn"
+          >
+            <i className="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a
+            className="profile-link-icon"
+            href="https://github.com/tlewismedia"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            data-tooltip="GitHub"
+          >
+            <i className="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            className="profile-link-icon resume-link-icon"
+            href="/tomlewis_resume_print.pdf"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Resume PDF"
+            data-tooltip="resume"
+          >
+            <i className="fa-solid fa-file-pdf" aria-hidden="true"></i>
+          </a>
+        </div>
         <h1>Hi, I&apos;m Tom Lewis.</h1>
         <p>
           I&apos;m a product-minded front-end engineer focused on building clean,
