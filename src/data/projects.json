@@ -1,6 +1,27 @@
 {
 	"projects": [
 		{
+			"title": "RAG Guess Who",
+			"lead": "Chat-based character guessing game built with roleplay prompts, retrieval, and ingestion tooling",
+			"description": "Demonstration of a simple RAG implementation as a Guess Who-style game. Built with Next.js and LangChain, the app uses a streaming conversational UI powered by the Vercel AI SDK so users can chat with a hidden character and infer the identity from retrieved context. The pipeline scrapes web pages, cleans HTML, creates a corpus of text documents, and chunks that content into JSON files as part of a simple corpus ingestion workflow before transforming it into vector embeddings for Pinecone. At runtime, the app performs vector search and semantic retrieval to ground responses. It should be acknowledged: famous characters are already well known by LLMs, so a stronger real-world use case would be non-famous people or internal organizational knowledge.",
+			"link": "https://rag-guess-who-demo.tomlewis.dev",
+			"tech": [
+				"Next.js",
+				"React",
+				"TypeScript",
+				"assistant-ui",
+				"Vercel AI SDK",
+				"LangChain",
+				"Pinecone",
+				"RAG",
+				"LLM Prompt Design",
+				"Ingestion Pipelines"
+			],
+			"images":[
+				{"name":"guess-who-rag", "title":"RAG Guess Who"}
+			]
+		},
+		{
 			"title": "SCORM Course &shy;Building System",
 			"lead": "Course Building System for Luxury Car Company",
 			"description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",

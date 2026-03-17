@@ -16,6 +16,9 @@ import {
 } from './types/projects'
 import './App.css'
 
+const PROJECT_RETURN_SCROLL_KEY = 'project-return-scroll-y';
+const PROJECT_RETURN_HASH_KEY = 'project-return-hash';
+
 type RouteState =
   | { type: 'home' }
   | { type: 'project'; slug: string };
@@ -99,6 +102,20 @@ function App() {
   useEffect(() => {
     if (route.type !== 'home') {
       return;
+    }
+
+    const savedScrollY = window.sessionStorage.getItem(PROJECT_RETURN_SCROLL_KEY);
+    const returnHash = window.sessionStorage.getItem(PROJECT_RETURN_HASH_KEY);
+
+    if (savedScrollY !== null && returnHash === '#/') {
+      window.sessionStorage.removeItem(PROJECT_RETURN_SCROLL_KEY);
+      window.sessionStorage.removeItem(PROJECT_RETURN_HASH_KEY);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: Number(savedScrollY), behavior: 'auto' });
+        });
+      });
     }
 
     const sections = Array.from(document.querySelectorAll('section'));
@@ -196,7 +213,17 @@ function App() {
       <FreelanceSection />
       <RicochetSection />
       <DigitalHarborSection />
-      <ProjectExplorerSection projects={projects} isLoading={isLoadingProjects} />
+      <ProjectExplorerSection
+        projects={projects}
+        isLoading={isLoadingProjects}
+        onProjectSelect={() => {
+          window.sessionStorage.setItem(
+            PROJECT_RETURN_SCROLL_KEY,
+            String(window.scrollY)
+          );
+          window.sessionStorage.setItem(PROJECT_RETURN_HASH_KEY, '#/');
+        }}
+      />
     </>
   )
 }

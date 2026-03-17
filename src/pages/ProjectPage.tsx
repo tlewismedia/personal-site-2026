@@ -1,8 +1,45 @@
+import type { ReactNode } from 'react'
 import type { ProjectRecord } from '../types/projects'
 
 type ProjectPageProps = {
   project: ProjectRecord;
   onBack: () => void;
+};
+
+const renderDescription = (description: string) => {
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkPattern.exec(description)) !== null) {
+    const [fullMatch, label, href] = match;
+
+    if (match.index > lastIndex) {
+      parts.push(description.slice(lastIndex, match.index));
+    }
+
+    const isExternal = /^https?:\/\//.test(href);
+
+    parts.push(
+      <a
+        key={`${href}-${match.index}`}
+        href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noreferrer' : undefined}
+      >
+        {label}
+      </a>
+    );
+
+    lastIndex = match.index + fullMatch.length;
+  }
+
+  if (lastIndex < description.length) {
+    parts.push(description.slice(lastIndex));
+  }
+
+  return parts;
 };
 
 export function ProjectPage({ project, onBack }: ProjectPageProps) {
@@ -25,7 +62,9 @@ export function ProjectPage({ project, onBack }: ProjectPageProps) {
             <h1>{project.title}</h1>
             <p className="project-detail-lead">{project.lead}</p>
           </div>
-          <p className="project-detail-description">{project.description}</p>
+          <p className="project-detail-description">
+            {renderDescription(project.description)}
+          </p>
           {project.link && (
             <p className="project-detail-link">
               <a href={projectLink} target="_blank" rel="noreferrer">
