@@ -20,6 +20,9 @@ dist
 dist-ssr
 coverage
 *.tsbuildinfo
+.next
+out
+next-env.d.ts
 
 # Environment files
 .env

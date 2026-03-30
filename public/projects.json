@@ -17,7 +17,7 @@
 		{
 			"title": "Conversational UI",
 			"lead": "Conversational help and intelligent guidance for complex workflows",
-			"description": "Developed a Conversational UI system for contextual help and dialog, paving the way for a cutting-edge, chat-like product experience. This included a performant custom animation engine using requestAnimationFrame techniques to deliver nuanced, expressive motion without sacrificing responsiveness. I also developed an Autofill feature that leverages LLM embeddings for intelligent form completion, helping users move through complex workflows with less friction. Related to this project is the [Assistive UI project](#/projects/assistive-ui).",
+			"description": "Developed a Conversational UI system for contextual help and dialog, paving the way for a cutting-edge, chat-like product experience. This included a performant custom animation engine using requestAnimationFrame techniques to deliver nuanced, expressive motion without sacrificing responsiveness. I also developed an Autofill feature that leverages LLM embeddings for intelligent form completion, helping users move through complex workflows with less friction. Related to this project is the [Assistive UI project](/projects/assistive-ui/).",
 			"tech": ["Accessibility", "ARIA", "Interaction Design", "Front-End Architecture", "Testing"],
 			"images":[]
 		},

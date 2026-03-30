@@ -702,14 +702,16 @@ p {
   margin: -0.1rem 0 0.35rem;
 }
 
-.project-detail-link a {
+.project-detail-link a,
+.project-detail-description a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid rgba(82, 242, 217, 0.4);
   padding-bottom: 0.08rem;
 }
 
-.project-detail-link a:hover {
+.project-detail-link a:hover,
+.project-detail-description a:hover {
   color: #dcfff9;
   border-bottom-color: rgba(220, 255, 249, 0.65);
 }
