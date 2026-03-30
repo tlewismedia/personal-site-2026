@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function TopSection() {
   return (
     <section className="top-section">
@@ -50,28 +52,25 @@ export function TopSection() {
           <article className="work-item">
             <i className="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
             <h3>
-              <a className="work-item-link" href="#/projects/next-generation-forms">
+              <Link className="work-item-link" href="/projects/next-generation-forms/">
                 Next Generation Forms
-              </a>
+              </Link>
             </h3>
           </article>
           <article className="work-item">
             <i className="fa-solid fa-compass-drafting" aria-hidden="true"></i>
             <h3>
-              <a
-                className="work-item-link"
-                href="#/projects/product-and-ui-ux-leadership"
-              >
+              <Link className="work-item-link" href="/projects/product-and-ui-ux-leadership/">
                 Product and UI/UX Leadership
-              </a>
+              </Link>
             </h3>
           </article>
           <article className="work-item">
             <i className="fa-solid fa-comments" aria-hidden="true"></i>
             <h3>
-              <a className="work-item-link" href="#/projects/conversational-ui">
+              <Link className="work-item-link" href="/projects/conversational-ui/">
                 Conversational UI
-              </a>
+              </Link>
             </h3>
           </article>
         </div>

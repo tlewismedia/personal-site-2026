@@ -1,10 +1,6 @@
-import type { ReactNode } from 'react'
-import type { ProjectRecord } from '../types/projects'
-
-type ProjectPageProps = {
-  project: ProjectRecord;
-  onBack: () => void;
-};
+import type { ReactNode } from 'react';
+import type { ProjectRecord } from '@/types/projects';
+import { BackButton } from './BackButton';
 
 const renderDescription = (description: string) => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -42,7 +38,11 @@ const renderDescription = (description: string) => {
   return parts;
 };
 
-export function ProjectPage({ project, onBack }: ProjectPageProps) {
+type Props = {
+  project: ProjectRecord;
+};
+
+export function ProjectDetail({ project }: Props) {
   const projectLink = project.link
     ? project.link.startsWith('http')
       ? project.link
@@ -52,9 +52,7 @@ export function ProjectPage({ project, onBack }: ProjectPageProps) {
   return (
     <main className="project-page">
       <div className="project-page-inner">
-        <button type="button" className="project-back-button" onClick={onBack}>
-          Back to main page
-        </button>
+        <BackButton />
 
         <article className="project-detail-card">
           <p className="project-detail-kicker">Project</p>

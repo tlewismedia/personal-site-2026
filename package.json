@@ -2,15 +2,14 @@
   "name": "personal-site-2026",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "npm run build && surge dist"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
+    "next": "^16.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

@@ -2,7 +2,7 @@ export function ArtDesignSection() {
   return (
     <section className="art-design-section">
       <h2>Art & Design</h2>
-      
+
       <p>
         As a kid, I was torn between two worlds-sketching characters and
         designing imaginary cities one day, taking apart gadgets to see how they
