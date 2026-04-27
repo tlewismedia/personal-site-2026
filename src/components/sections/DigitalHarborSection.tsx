@@ -6,7 +6,7 @@ export function DigitalHarborSection() {
         <p className="digital-harbor-role">
           Product Team Lead, Full Stack Developer
         </p>
-        <p className="digital-harbor-period">2020 - Present</p>
+        <p className="digital-harbor-period">2020 - 2026</p>
       </div>
 
       <p className="digital-harbor-summary">

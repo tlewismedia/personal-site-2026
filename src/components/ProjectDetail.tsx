@@ -2,17 +2,17 @@ import type { ReactNode } from 'react';
 import type { ProjectRecord } from '@/types/projects';
 import { BackButton } from './BackButton';
 
-const renderDescription = (description: string) => {
+const renderInline = (text: string): ReactNode[] => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
-  while ((match = linkPattern.exec(description)) !== null) {
+  while ((match = linkPattern.exec(text)) !== null) {
     const [fullMatch, label, href] = match;
 
     if (match.index > lastIndex) {
-      parts.push(description.slice(lastIndex, match.index));
+      parts.push(text.slice(lastIndex, match.index));
     }
 
     const isExternal = /^https?:\/\//.test(href);
@@ -31,12 +31,19 @@ const renderDescription = (description: string) => {
     lastIndex = match.index + fullMatch.length;
   }
 
-  if (lastIndex < description.length) {
-    parts.push(description.slice(lastIndex));
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
   }
 
   return parts;
 };
+
+const renderDescription = (description: string) =>
+  description
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter((paragraph) => paragraph.length > 0)
+    .map((paragraph, index) => <p key={index}>{renderInline(paragraph)}</p>);
 
 type Props = {
   project: ProjectRecord;
@@ -60,9 +67,9 @@ export function ProjectDetail({ project }: Props) {
             <h1>{project.title}</h1>
             <p className="project-detail-lead">{project.lead}</p>
           </div>
-          <p className="project-detail-description">
+          <div className="project-detail-description">
             {renderDescription(project.description)}
-          </p>
+          </div>
           {project.link && (
             <p className="project-detail-link">
               <a href={projectLink} target="_blank" rel="noreferrer">
@@ -82,7 +89,7 @@ export function ProjectDetail({ project }: Props) {
           {project.images.length > 0 && (
             <div className="project-carousel" aria-label="Project images">
               {project.images.map((image) => {
-                const extension = image.ext === 'gif' ? 'gif' : 'jpg';
+                const extension = image.ext ?? 'jpg';
                 const fullPath = `/img/prj/${image.name}.${extension}`;
 
                 return (

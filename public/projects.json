@@ -1,136 +1,232 @@
 {
-	"projects": [
-		{
-			"title": "Next Generation Forms",
-			"lead": "Collaborative form authoring platform with advanced UX",
-			"description": "Traditional enterprise forms often feel tedious, anxiety-inducing, isolating, and boring for both builders and end users. We changed that with engaging UX, collaborative workflows, and more personal interaction patterns. Under the hood, this was a complex enterprise Angular application backed by Nest.js microservices and real-time interactions. My primary focus was the form builder itself: complex structures and layouts, robust state management, and a custom form logic builder. The result was the ability to create engaging form experiences so enterprise customers can make a stronger impression with users while still supporting complex workflows.",
-			"tech": ["Angular", "Nest.js", "NgRx", "TypeScript", "Design Systems", "Playwright"],
-			"images":[]
-		},
-		{
-			"title": "Product and UI/UX Leadership",
-			"lead": "Cross-functional product direction through design and engineering alignment",
-			"description": "Led UX efforts by producing wireframes, guiding design of application flows, layouts, and form controls, and mentoring developers and designers on usability best practices. While primarily leading with engineering, I also collaborated with Product Management to shape user stories, conduct usability assessments, and inform product direction. I mentored junior developers in clean, maintainable coding through code reviews, pair programming, and practical implementation standards. I designed and implemented DesignKit and a flexible theming and template system that enabled visually appealing, customizable forms with real-time updates, essentially a Canva-like experience for form building. I also set up and guided Storybook usage, developed component system strategy to align design and engineering, and automated story creation through orchestrated LLM-based workflows.",
-			"tech": ["Product Strategy", "UX Leadership", "Wireframing", "Storybook", "Usability Testing", "Mentorship"],
-			"images":[]
-		},
-		{
-			"title": "Conversational UI",
-			"lead": "Conversational help and intelligent guidance for complex workflows",
-			"description": "Developed a Conversational UI system for contextual help and dialog, paving the way for a cutting-edge, chat-like product experience. This included a performant custom animation engine using requestAnimationFrame techniques to deliver nuanced, expressive motion without sacrificing responsiveness. I also developed an Autofill feature that leverages LLM embeddings for intelligent form completion, helping users move through complex workflows with less friction. Related to this project is the [Assistive UI project](/projects/assistive-ui/).",
-			"tech": ["Accessibility", "ARIA", "Interaction Design", "Front-End Architecture", "Testing"],
-			"images":[]
-		},
-		{
-			"title": "Assistive UI",
-			"lead": "Component system for conversational guidance, tours, and contextual help",
-			"description": "Built a reusable component system for conversation-driven interfaces that supports help systems and guided UI tours. The interaction model uses tree-based dialog data so flows are structured, extensible, and easy to maintain. Motion is powered by performant requestAnimationFrame animations designed to feel expressive and humanistic, even in complex screens. The assistant can pin to scrollable interface regions for context-aware guidance or run as a free-floating layer for broader onboarding scenarios.",
-			"link": "assistive-ui-demo.tomlewis.dev",
-			"tech": ["React", "TypeScript", "Conversation Design", "UI Architecture", "requestAnimationFrame", "Animation Systems"],
-			"images":[
-				{"name":"assistive-ui", "title":"Assistive UI Demo"}
-			]
-		},
-		{
-			"title": "RAG Guess Who",
-			"lead": "Chat-based character guessing game built with roleplay prompts, retrieval, and ingestion tooling",
-			"description": "Demonstration of a simple RAG implementation as a Guess Who-style game. Built with Next.js and LangChain, the app uses a streaming conversational UI powered by the Vercel AI SDK so users can chat with a hidden character and infer the identity from retrieved context. The pipeline scrapes web pages, cleans HTML, creates a corpus of text documents, and chunks that content into JSON files as part of a simple corpus ingestion workflow before transforming it into vector embeddings for Pinecone. At runtime, the app performs vector search and semantic retrieval to ground responses. It should be acknowledged: famous characters are already well known by LLMs, so a stronger real-world use case would be non-famous people or internal organizational knowledge.",
-			"link": "https://rag-guess-who-demo.tomlewis.dev",
-			"tech": [
-				"Next.js",
-				"React",
-				"TypeScript",
-				"assistant-ui",
-				"Vercel AI SDK",
-				"LangChain",
-				"Pinecone",
-				"RAG",
-				"LLM Prompt Design",
-				"Ingestion Pipelines"
-			],
-			"images":[
-				{"name":"guess-who-rag", "title":"RAG Guess Who"}
-			]
-		},
-		{
-			"title": "SCORM Course &shy;Building System",
-			"lead": "Course Building System for Luxury Car Company",
-			"description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",
-			"tech": ["Vue", "Vuex", "Vue-Router", "Javascript", "Ruby", "Cypress", "SASS", "Invision Freehand", "Invision Studio", "Prismic"],
-			"images":[
-				{"name":"sc-wireframe1", "ext":"gif", "title":"Initial Concept Wireframe 1"},
-				{"name":"sc-wireframe2", "ext":"gif", "title":"Initial Concept Wireframe 2"},
-				{"name":"sc-wireframe3", "ext":"gif", "title":"Initial Concept Wireframe 3"},
-				{"name":"sc-spread", "title":"Early Concepts, Content Block Variations"}
-			]
-		},
-		{
-			"title": "Explore EMC",
-			"lead": "3D Product Explorer Application for Rhode Schwarz",
-			"description": "Rhode Schwarz, producer of electronic test chambers and equipment wanted an application that offers and immersive experience to explore their products. We leveraged the SketchFab 3D and extended it to allow more interface views for detailed product information. Lead implementation and advised on 3D asset production. Connected headless CMS for convenient content editing",
-			"tech": ["Web Components", "Sketchfab", "Javascript", "Blender", "Photoshop", "Prismic"],
-			"images":[
-				{"name":"rs-screen1", "title":"EMC Screenshot 1"},
-				{"name":"rs-screen3", "title":"EMC Screenshot 2"},
-				{"name":"rs-screen4", "title":"EMC Screenshot 3"},
-				{"name":"rs-screen5", "title":"EMC Screenshot 4"}
-			]
-		},
-		{
-			"title": "Augmented Reality Tradeshow Installation",
-			"lead": "Interactive AR for Georgia Pacific",
-			"description": "Client needed to demonstrate different construction layers as animations. Users would hold a card beneath a camera and an animation would start on the main screen allowing inspection from multiple angles. Project was built in Unity and targeted for iPhone. Deployed to devices via TestFlight. Involved with debugging application, advising on asset creation, and testing/deployment system.",
-			"tech": ["Unity", "XCode", "TestFlight", "Vuforia", "C#"],
-			"images":[
-				{"name":"gp-ar1", "title":"Georgia Pacific Tradeshow 1"},
-				{"name":"gp-ar2", "title":"Georgia Pacific Tradeshow 2"}
-			]
-		},
-		{
-			"title": "DensShield microsite",
-			"lead": "DensShield microsite for Georgia Pacific",
-			"description": "Single page product overview with animations. Custom store locator.",
-			"tech": ["Greensock", "Javascript", "Google Maps API"],
-			"images":[
-				{"name":"ds-home1", "title":"DensSheild Home 1"},
-				{"name":"ds-home2", "title":"DensSheild Home 2"},
-				{"name":"ds-home3", "title":"DensSheild Home 3"},
-				{"name":"ds-home4", "title":"DensSheild Home 4"},
-				{"name":"ds-map", "title":"DensSheild Store Locator"}
-			]
-		},
-		{
-			"title": "Baja Weddings and Events",
-			"lead": "Website for Event Planning Company",
-			"description": "Responsible for custom graphics, logo, design, and development. Responsive layout.",
-			"tech": ["HTML", "CSS", "Javascript", "PHP", "Wordpress"],
-			"images":[
-				{"name":"baja-events-mobile", "title":"Baja Events Mobile"},
-				{"name":"baja-events-med", "title":"Baja Events Medium"},
-				{"name":"baja-events-large", "title":"Baja Events Medium Large"}
-			]
-		},
-		{
-			"title": "Top Secret Hair",
-			"lead": "E-Commerce Website for Hair Accessory Company.",
-			"description": "Logo refresh. Responsible for design and development. Custom artwork. Responsive design.",
-			"tech": ["Wordpress","Woo Commerce","Bootstrap","PHP","HTML","CSS","Javascript"],
-			"images":[
-				{"name":"ts1", "title":"Home Desktop"},
-				{"name":"ts2", "title":"Product Page"},
-				{"name":"ts3", "title":"Home Mobile"},
-				{"name":"ts4", "title":"Gallery"}
-			]
-		},
-		{
-			"title": "Writers Guild of America",
-			"lead": "Website for Writers Guild of America Pension Plan and Health Fund",
-			"description": "Responsible for design and development of static sections of site. 300+ pages of site architecture. Custom artwork and layouts. Info graphics.",
-			"tech": ["Wordpress","Woo Commerce","Bootstrap","PHP","HTML","CSS","Javascript"],
-			"images":[
-				{"name":"wga1", "title":"Home Page"},
-				{"name":"wga2", "title":"Benefits Page"}
-			]
-		}
-	]
+  "projects": [
+    {
+      "title": "Starling Data",
+      "lead": "Adaptive RAG compliance copilot for financial institutions with grounded, source-cited answers",
+      "description": "Compliance teams at banks, credit unions, and lenders work against a sprawling and shifting body of regulation — federal rules, state-by-state variation, examiner guidance, and the institution's own internal policies layered on top. Traditional search returns documents and leaves the interpretation to a human; asking a general-purpose LLM risks confident fabrication or stale citations, neither of which survives an exam. Starling Data is a product built to close that gap. It's an adaptive RAG (Retrieval Augemented Generation) copilot that returns grounded answers with inline citations to the underlying source, surfaces confidence rather than hiding it, and refuses to answer when retrieval is insufficient — so every response is defensible and auditable. \n\n Under the hood it's a LangGraph StateGraph (retrieve → generate) wired into a Next.js app, with markdown-aware chunking, OpenAI embeddings, and a Pinecone vector store. The architecture is intentionally shaped so future jobs — multi-hop cross-reference analysis, agentic exam preparation with human-in-the-loop review, plain-language interpretation, and recency-sensitive change monitoring — slot in as added nodes and conditional edges rather than rewrites. A curated evaluation harness measures retrieval precision, answer faithfulness, and flag accuracy so changes are regression-checked instead of vibes-checked.",
+      "link": "https://starling-data-production.up.railway.app",
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "LangGraph",
+        "LangChain",
+        "OpenAI",
+        "Pinecone",
+        "RAG",
+        "Evaluation Harness",
+        "Vitest",
+        "Playwright",
+        "Agentic Coding"
+      ],
+      "images": [
+        { "name": "starling", "title": "Starling Data", "ext": "webp" },
+        { "name": "starling1", "title": "Starling Data", "ext": "webp" }
+      ]
+    },
+    {
+      "title": "Next Generation Forms",
+      "lead": "Collaborative form authoring platform with advanced UX",
+      "description": "Traditional enterprise forms often feel tedious, anxiety-inducing, isolating, and boring for both builders and end users. We changed that with engaging UX, collaborative workflows, and more personal interaction patterns. Under the hood, this was a complex enterprise Angular application backed by Nest.js microservices and real-time interactions. My primary focus was the form builder itself: complex structures and layouts, robust state management, and a custom form logic builder. The result was the ability to create engaging form experiences so enterprise customers can make a stronger impression with users while still supporting complex workflows.",
+      "tech": [
+        "Angular",
+        "Nest.js",
+        "NgRx",
+        "TypeScript",
+        "Design Systems",
+        "Playwright"
+      ],
+      "images": []
+    },
+    {
+      "title": "Product and UI/UX Leadership",
+      "lead": "Cross-functional product direction through design and engineering alignment",
+      "description": "Led UX efforts by producing wireframes, guiding design of application flows, layouts, and form controls, and mentoring developers and designers on usability best practices. While primarily leading with engineering, I also collaborated with Product Management to shape user stories, conduct usability assessments, and inform product direction. I mentored junior developers in clean, maintainable coding through code reviews, pair programming, and practical implementation standards. I designed and implemented DesignKit and a flexible theming and template system that enabled visually appealing, customizable forms with real-time updates, essentially a Canva-like experience for form building. I also set up and guided Storybook usage, developed component system strategy to align design and engineering, and automated story creation through orchestrated LLM-based workflows.",
+      "tech": [
+        "Product Strategy",
+        "UX Leadership",
+        "Wireframing",
+        "Storybook",
+        "Usability Testing",
+        "Mentorship"
+      ],
+      "images": []
+    },
+    {
+      "title": "Conversational UI",
+      "lead": "Conversational help and intelligent guidance for complex workflows",
+      "description": "Developed a Conversational UI system for contextual help and dialog, paving the way for a cutting-edge, chat-like product experience. This included a performant custom animation engine using requestAnimationFrame techniques to deliver nuanced, expressive motion without sacrificing responsiveness. I also developed an Autofill feature that leverages LLM embeddings for intelligent form completion, helping users move through complex workflows with less friction. Related to this project is the [Assistive UI project](/projects/assistive-ui/).",
+      "tech": [
+        "Accessibility",
+        "ARIA",
+        "Interaction Design",
+        "Front-End Architecture",
+        "Testing"
+      ],
+      "images": []
+    },
+    {
+      "title": "Assistive UI",
+      "lead": "Component system for conversational guidance, tours, and contextual help",
+      "description": "Built a reusable component system for conversation-driven interfaces that supports help systems and guided UI tours. The interaction model uses tree-based dialog data so flows are structured, extensible, and easy to maintain. Motion is powered by performant requestAnimationFrame animations designed to feel expressive and humanistic, even in complex screens. The assistant can pin to scrollable interface regions for context-aware guidance or run as a free-floating layer for broader onboarding scenarios.",
+      "link": "assistive-ui-demo.tomlewis.dev",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Conversation Design",
+        "UI Architecture",
+        "requestAnimationFrame",
+        "Animation Systems"
+      ],
+      "images": [{ "name": "assistive-ui", "title": "Assistive UI Demo" }]
+    },
+    {
+      "title": "RAG Guess Who",
+      "lead": "Chat-based character guessing game built with roleplay prompts, retrieval, and ingestion tooling",
+      "description": "Demonstration of a simple RAG implementation as a Guess Who-style game. Built with Next.js and LangChain, the app uses a streaming conversational UI powered by the Vercel AI SDK so users can chat with a hidden character and infer the identity from retrieved context. The pipeline scrapes web pages, cleans HTML, creates a corpus of text documents, and chunks that content into JSON files as part of a simple corpus ingestion workflow before transforming it into vector embeddings for Pinecone. At runtime, the app performs vector search and semantic retrieval to ground responses. It should be acknowledged: famous characters are already well known by LLMs, so a stronger real-world use case would be non-famous people or internal organizational knowledge.",
+      "link": "https://rag-guess-who-demo.tomlewis.dev",
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "assistant-ui",
+        "Vercel AI SDK",
+        "LangChain",
+        "Pinecone",
+        "RAG",
+        "LLM Prompt Design",
+        "Ingestion Pipelines"
+      ],
+      "images": [{ "name": "guess-who-rag", "title": "RAG Guess Who" }]
+    },
+    {
+      "title": "SCORM Course &shy;Building System",
+      "lead": "Course Building System for Luxury Car Company",
+      "description": "Client needed to convert their training courses to be mobile compatible and update to an existing brand. Courses needed to be SCORM conformant to interact with their LMS. Lead architecture, wireframing, initial concepts, and implementation. Single code base publishes each course of series. Uses headless CMS to house the content. Advised on user testing strategy.",
+      "tech": [
+        "Vue",
+        "Vuex",
+        "Vue-Router",
+        "Javascript",
+        "Ruby",
+        "Cypress",
+        "SASS",
+        "Invision Freehand",
+        "Invision Studio",
+        "Prismic"
+      ],
+      "images": [
+        {
+          "name": "sc-wireframe1",
+          "ext": "gif",
+          "title": "Initial Concept Wireframe 1"
+        },
+        {
+          "name": "sc-wireframe2",
+          "ext": "gif",
+          "title": "Initial Concept Wireframe 2"
+        },
+        {
+          "name": "sc-wireframe3",
+          "ext": "gif",
+          "title": "Initial Concept Wireframe 3"
+        },
+        {
+          "name": "sc-spread",
+          "title": "Early Concepts, Content Block Variations"
+        }
+      ]
+    },
+    {
+      "title": "Explore EMC",
+      "lead": "3D Product Explorer Application for Rhode Schwarz",
+      "description": "Rhode Schwarz, producer of electronic test chambers and equipment wanted an application that offers and immersive experience to explore their products. We leveraged the SketchFab 3D and extended it to allow more interface views for detailed product information. Lead implementation and advised on 3D asset production. Connected headless CMS for convenient content editing",
+      "tech": [
+        "Web Components",
+        "Sketchfab",
+        "Javascript",
+        "Blender",
+        "Photoshop",
+        "Prismic"
+      ],
+      "images": [
+        { "name": "rs-screen1", "title": "EMC Screenshot 1" },
+        { "name": "rs-screen3", "title": "EMC Screenshot 2" },
+        { "name": "rs-screen4", "title": "EMC Screenshot 3" },
+        { "name": "rs-screen5", "title": "EMC Screenshot 4" }
+      ]
+    },
+    {
+      "title": "Augmented Reality Tradeshow Installation",
+      "lead": "Interactive AR for Georgia Pacific",
+      "description": "Client needed to demonstrate different construction layers as animations. Users would hold a card beneath a camera and an animation would start on the main screen allowing inspection from multiple angles. Project was built in Unity and targeted for iPhone. Deployed to devices via TestFlight. Involved with debugging application, advising on asset creation, and testing/deployment system.",
+      "tech": ["Unity", "XCode", "TestFlight", "Vuforia", "C#"],
+      "images": [
+        { "name": "gp-ar1", "title": "Georgia Pacific Tradeshow 1" },
+        { "name": "gp-ar2", "title": "Georgia Pacific Tradeshow 2" }
+      ]
+    },
+    {
+      "title": "DensShield microsite",
+      "lead": "DensShield microsite for Georgia Pacific",
+      "description": "Single page product overview with animations. Custom store locator.",
+      "tech": ["Greensock", "Javascript", "Google Maps API"],
+      "images": [
+        { "name": "ds-home1", "title": "DensSheild Home 1" },
+        { "name": "ds-home2", "title": "DensSheild Home 2" },
+        { "name": "ds-home3", "title": "DensSheild Home 3" },
+        { "name": "ds-home4", "title": "DensSheild Home 4" },
+        { "name": "ds-map", "title": "DensSheild Store Locator" }
+      ]
+    },
+    {
+      "title": "Baja Weddings and Events",
+      "lead": "Website for Event Planning Company",
+      "description": "Responsible for custom graphics, logo, design, and development. Responsive layout.",
+      "tech": ["HTML", "CSS", "Javascript", "PHP", "Wordpress"],
+      "images": [
+        { "name": "baja-events-mobile", "title": "Baja Events Mobile" },
+        { "name": "baja-events-med", "title": "Baja Events Medium" },
+        { "name": "baja-events-large", "title": "Baja Events Medium Large" }
+      ]
+    },
+    {
+      "title": "Top Secret Hair",
+      "lead": "E-Commerce Website for Hair Accessory Company.",
+      "description": "Logo refresh. Responsible for design and development. Custom artwork. Responsive design.",
+      "tech": [
+        "Wordpress",
+        "Woo Commerce",
+        "Bootstrap",
+        "PHP",
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "images": [
+        { "name": "ts1", "title": "Home Desktop" },
+        { "name": "ts2", "title": "Product Page" },
+        { "name": "ts3", "title": "Home Mobile" },
+        { "name": "ts4", "title": "Gallery" }
+      ]
+    },
+    {
+      "title": "Writers Guild of America",
+      "lead": "Website for Writers Guild of America Pension Plan and Health Fund",
+      "description": "Responsible for design and development of static sections of site. 300+ pages of site architecture. Custom artwork and layouts. Info graphics.",
+      "tech": [
+        "Wordpress",
+        "Woo Commerce",
+        "Bootstrap",
+        "PHP",
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "images": [
+        { "name": "wga1", "title": "Home Page" },
+        { "name": "wga2", "title": "Benefits Page" }
+      ]
+    }
+  ]
 }
