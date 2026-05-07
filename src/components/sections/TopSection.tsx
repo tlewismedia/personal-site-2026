@@ -28,7 +28,7 @@ export function TopSection() {
           </a>
           <a
             className="profile-link-icon resume-link-icon"
-            href="/tomlewis_resume_print.pdf"
+            href="/tomlewis_resume.pdf"
             target="_blank"
             rel="noreferrer"
             aria-label="Resume PDF"
