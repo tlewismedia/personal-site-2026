@@ -8,23 +8,36 @@ export function RicochetSection() {
       </div>
 
       <p className="ricochet-summary">
-        Progressed from Senior Programmer to Solution Architect, leading web,
-        app, and interactive product delivery for clients with complex technical
-        and UX requirements.
+        Progressed from Junior Developer to Senior Developer to Solution
+        Architect, leading web, app, and interactive product delivery for
+        clients with complex technical and UX requirements.
       </p>
 
       <ul className="ricochet-highlights">
         <li>
-          Delivered 3D interactive web applications, legal workflow prototypes,
-          LMS systems, and AR trade show experiences.
+          Led development of web applications and digital products for clients
+          including <strong>Nike</strong>, <strong>Intel</strong>,{" "}
+          <strong>Georgia Pacific</strong>, and <strong>Toyota</strong>,
+          providing technical direction, architecture, and implementation
+          strategy.
         </li>
         <li>
-          Led implementation across modern stacks including Rails + Angular,
-          Web Components, Docker, Unity/C#, and headless integrations.
+          Built a 3D interactive web app for a <strong>Rohde & Schwarz</strong>{" "}
+          electronics test chamber using JavaScript, Web Components, Webpack,
+          and the Sketchfab API.
         </li>
         <li>
-          Improved maintainability and quality with modular CMS systems,
-          accessibility-focused implementation, and cross-platform delivery.
+          Developed prototypes and advised on UX for a legal document management
+          application for a major semiconductor manufacturer.
+        </li>
+        <li>
+          Architected and built a Learning Management System with a Ruby on
+          Rails API and Angular front end.
+        </li>
+        <li>
+          Created a proof-of-concept and led development for an AR app for a
+          Georgia Pacific trade show using Unity, C#, 3D modeling, and
+          Xcode/TestFlight.
         </li>
       </ul>
 

@@ -1,10 +1,14 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export function TopSection() {
   return (
     <section className="top-section">
       <div className="top-intro">
-        <img className="profile-image" src="/profile.jpg" alt="Tom Lewis portrait" />
+        <img
+          className="profile-image"
+          src="/profile.jpg"
+          alt="Tom Lewis portrait"
+        />
         <div className="profile-links" aria-label="Social and resume links">
           <a
             className="profile-link-icon"
@@ -37,42 +41,48 @@ export function TopSection() {
             <i className="fa-solid fa-file-pdf" aria-hidden="true"></i>
           </a>
         </div>
-        <h1>Hi, I&apos;m Tom Lewis.</h1>
+        <h1>Tom Lewis</h1>
         <p>
-          I&apos;m a product-minded front-end engineer focused on building clean,
-          reliable, and human-centered digital experiences. I enjoy turning
-          complex ideas into clear interfaces that are useful, fast, and easy
-          to maintain.
+          Product-minded, front-end leaning, full-stack engineer with over 15
+          years of experience building scalable applications, shaping product
+          strategy, and leading multidisciplinary teams, I am passionate about
+          discovering and understanding core problems and innovating solutions.
         </p>
       </div>
 
       <div className="recent-work">
-        <h2>What have I been working on</h2>
+        <h2>Recent Work</h2>
         <div className="work-items-row">
-          <article className="work-item">
-            <i className="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
-            <h3>
-              <Link className="work-item-link" href="/projects/next-generation-forms/">
-                Next Generation Forms
-              </Link>
-            </h3>
-          </article>
-          <article className="work-item">
-            <i className="fa-solid fa-compass-drafting" aria-hidden="true"></i>
-            <h3>
-              <Link className="work-item-link" href="/projects/product-and-ui-ux-leadership/">
-                Product and UI/UX Leadership
-              </Link>
-            </h3>
-          </article>
-          <article className="work-item">
-            <i className="fa-solid fa-comments" aria-hidden="true"></i>
-            <h3>
-              <Link className="work-item-link" href="/projects/conversational-ui/">
-                Conversational UI
-              </Link>
-            </h3>
-          </article>
+          <Link className="work-item-link" href="/projects/starling-data/">
+            <article className="work-item">
+              <i className="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+              <h3>Starling Data</h3>
+            </article>
+          </Link>
+          <Link
+            className="work-item-link"
+            href="/projects/next-generation-forms/"
+          >
+            <article className="work-item">
+              <i
+                className="fa-solid fa-file-circle-plus"
+                aria-hidden="true"
+              ></i>
+              <h3>Next Generation Forms</h3>
+            </article>
+          </Link>
+          <Link
+            className="work-item-link"
+            href="/projects/product-and-ui-ux-leadership/"
+          >
+            <article className="work-item">
+              <i
+                className="fa-solid fa-compass-drafting"
+                aria-hidden="true"
+              ></i>
+              <h3>Product and UI/UX Leadership</h3>
+            </article>
+          </Link>
         </div>
       </div>
 

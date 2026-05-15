@@ -27,7 +27,7 @@
     {
       "title": "Next Generation Forms",
       "lead": "Collaborative form authoring platform with advanced UX",
-      "description": "Traditional enterprise forms often feel tedious, anxiety-inducing, isolating, and boring for both builders and end users. We changed that with engaging UX, collaborative workflows, and more personal interaction patterns. Under the hood, this was a complex enterprise Angular application backed by Nest.js microservices and real-time interactions. My primary focus was the form builder itself: complex structures and layouts, robust state management, and a custom form logic builder. The result was the ability to create engaging form experiences so enterprise customers can make a stronger impression with users while still supporting complex workflows.",
+      "description": "Traditional enterprise forms often feel tedious, anxiety-inducing, isolating, and boring for both builders and end users. We changed that with engaging UX, collaborative workflows, and more personal interaction patterns. Under the hood, this was a complex enterprise Angular application backed by Nest.js microservices and real-time interactions. My primary focus was the form builder itself: complex structures and layouts, robust state management, and a custom form logic builder. The result was the ability to create engaging form experiences so enterprise customers can make a stronger impression with users while still supporting complex workflows. Related to this project are the [Assistive UI project](/projects/assistive-ui/) and the [Conversational UI project](/projects/conversational-ui/).",
       "tech": [
         "Angular",
         "Nest.js",

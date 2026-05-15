@@ -14,17 +14,14 @@ export function FreelanceSection() {
 
       <ul className="freelance-callouts">
         <li>
-          Delivered CMS and commerce solutions using WordPress, WooCommerce,
-          OpenCart, and custom stacks.
+          Delivered projects across entertainment, finance, and e-commerce for
+          clients including the <strong>Writers Guild of America</strong>,{" "}
+          <strong>Fox Studios</strong>, and{" "}
+          <strong>Kopion Asset Management</strong>.
         </li>
         <li>
-          Worked with organizations including Writers Guild of America, Fox
-          Entertainment, and Kopion Asset Management.
-        </li>
-        <li>
-          Built strong client-facing skills in estimation, scoping, and
-          cross-team delivery while completing my Computer Science degree at
-          OSU.
+          Managed full project lifecycle from client communication and
+          requirements gathering through design, development, and launch.
         </li>
       </ul>
 

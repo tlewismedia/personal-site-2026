@@ -4,7 +4,7 @@ export function DigitalHarborSection() {
       <div className="digital-harbor-header">
         <h2>Digital Harbor</h2>
         <p className="digital-harbor-role">
-          Product Team Lead, Full Stack Developer
+          ‘Form Designer’ Team Lead, Product Team Lead, Full Stack Developer
         </p>
         <p className="digital-harbor-period">2020 - 2026</p>
       </div>
@@ -16,16 +16,48 @@ export function DigitalHarborSection() {
 
       <ul className="digital-harbor-highlights">
         <li>
-          Built scalable front-end architecture in Angular with Nest.js
-          microservices and NgRx state management.
+          Led product, design, and engineering for{" "}
+          <strong>
+            <em>Social Forms</em>
+          </strong>
+          , an enterprise form-building platform focused on solving the
+          frustrations of multi-user forms with complex workflows.
         </li>
         <li>
-          Designed and implemented DesignKit, theming/templates, and a complex
-          drag-and-drop builder with advanced layouts and real-time updates.
+          Developed an Assistive UI system for contextual help/dialog including
+          a performant custom animation engine (RAF techniques) reducing
+          rendering lag by 30%.
         </li>
         <li>
-          Led UX/product alignment through wireframing, usability assessments,
-          Storybook/component strategy, AI-assisted QA workflows, and mentoring.
+          Built{" "}
+          <strong>
+            <em>Social Autofill</em>
+          </strong>
+          , a feature leveraging LLM embeddings for intelligent form completion;
+          drove adoption from near 0% to 100% of form designers.
+        </li>
+
+        <li>
+          Architected{" "}
+          <strong>
+            <em>DesignKit</em>
+          </strong>
+          , a theming and template system that changed how teams approached
+          forms — from utilitarian defaults to considered, brand-forward
+          designs.
+        </li>
+
+        <li>
+          Led adoption of a unified dev/QA testing process built on{" "}
+          <strong>Playwright</strong> and AI-assisted test generation,
+          increasing e2e test coverage by 50% and boosting shipping confidence.
+        </li>
+
+        <li>
+          {" "}
+          Established <strong>Storybook</strong> and a component system strategy
+          to align design and engineering, including automated story generation
+          workflows.
         </li>
       </ul>
 

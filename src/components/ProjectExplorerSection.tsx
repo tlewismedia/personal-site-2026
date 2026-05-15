@@ -24,9 +24,9 @@ export function ProjectExplorerSection({ projects }: Props) {
               href={`/projects/${project.slug}/`}
               onClick={saveScrollPos}
             >
-              {project.title}
+              <span className="project-link-title">{project.title}</span>
+              <p>{project.lead}</p>
             </Link>
-            <p>{project.lead}</p>
           </li>
         ))}
       </ul>

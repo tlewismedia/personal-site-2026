@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap");
 
 :root {
   --bg-primary: #062a30;
@@ -25,11 +25,19 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 15% 15%, rgba(45, 212, 191, 0.2), transparent 30%),
-    radial-gradient(circle at 85% 10%, rgba(13, 148, 136, 0.24), transparent 35%),
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(45, 212, 191, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(13, 148, 136, 0.24),
+      transparent 35%
+    ),
     linear-gradient(165deg, var(--bg-primary), #042126 45%, #02171b 100%);
   color: var(--text-primary);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 #root {
@@ -53,7 +61,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   letter-spacing: 0.01em;
   line-height: 1.15;
   color: #f4fffd;
@@ -79,10 +87,16 @@ p {
   line-height: 1.72;
 }
 
+strong {
+  color: white;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 2400ms ease, transform 2400ms ease;
+  transition:
+    opacity 2400ms ease,
+    transform 2400ms ease;
 }
 
 .reveal-on-scroll.is-visible {
@@ -154,7 +168,10 @@ p {
   background: rgba(4, 33, 38, 0.6);
   color: #d9fffa;
   text-decoration: none;
-  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .profile-link-icon:hover {
@@ -178,7 +195,7 @@ p {
   border: 1px solid rgba(82, 242, 217, 0.32);
   background: rgba(4, 33, 38, 0.98);
   color: #ddfff9;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -186,7 +203,9 @@ p {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 .profile-link-icon:hover::after,
@@ -215,9 +234,18 @@ p {
   padding: 1.1rem;
   border: 1px solid rgba(82, 242, 217, 0.23);
   border-radius: 12px;
-  background: linear-gradient(160deg, rgba(8, 56, 64, 0.9), rgba(5, 34, 39, 0.85));
+  background: linear-gradient(
+    160deg,
+    rgba(8, 56, 64, 0.9),
+    rgba(5, 34, 39, 0.85)
+  );
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
-  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  height: 100%;
+  box-sizing: border-box;
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .work-item:hover {
@@ -241,9 +269,11 @@ p {
 .work-item-link {
   color: inherit;
   text-decoration: none;
+  display: block;
+  height: 100%;
 }
 
-.work-item-link:hover {
+.work-item-link:hover h3 {
   color: var(--accent);
 }
 
@@ -258,7 +288,10 @@ p {
   color: #d9fffa;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 220ms ease, border-color 220ms ease, transform 220ms ease;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease;
 }
 
 .scroll-to-projects-link:hover {
@@ -327,7 +360,10 @@ p {
   border-left: 2px solid rgba(82, 242, 217, 0.45);
   background: rgba(4, 33, 38, 0.35);
   border-radius: 0 12px 12px 0;
-  transition: border-color 220ms ease, background-color 220ms ease, transform 220ms ease;
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease,
+    transform 220ms ease;
 }
 
 .principle-item:hover {
@@ -340,7 +376,7 @@ p {
   display: inline-block;
   margin-bottom: 0.45rem;
   color: var(--accent);
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -389,7 +425,7 @@ p {
 
 .career-role {
   margin: 0;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   color: #d9fffa;
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   letter-spacing: 0.02em;
@@ -462,7 +498,7 @@ p {
 
 .freelance-role {
   margin: 0;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   color: #d9fffa;
   font-size: clamp(1rem, 1.7vw, 1.14rem);
 }
@@ -517,7 +553,7 @@ p {
 
 .ricochet-role {
   margin: 0;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   color: #d9fffa;
   font-size: clamp(1rem, 1.7vw, 1.14rem);
 }
@@ -563,7 +599,7 @@ p {
 
 .digital-harbor-role {
   margin: 0;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   color: #d9fffa;
   font-size: clamp(1rem, 1.7vw, 1.14rem);
 }
@@ -606,21 +642,34 @@ p {
 
 .project-link-list li {
   text-align: left;
+}
+
+.project-link-list a {
+  display: block;
   padding: 0.95rem 1rem;
   border: 1px solid rgba(82, 242, 217, 0.16);
   border-radius: 12px;
   background: rgba(4, 33, 38, 0.35);
-}
-
-.project-link-list a {
   color: #e7fffb;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
-  font-size: 1.08rem;
-  font-weight: 600;
   text-decoration: none;
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .project-link-list a:hover {
+  border-color: rgba(82, 242, 217, 0.5);
+  background: rgba(4, 33, 38, 0.55);
+}
+
+.project-link-title {
+  display: block;
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.project-link-list a:hover .project-link-title {
   color: var(--accent);
 }
 
@@ -651,7 +700,7 @@ p {
   border: 1px solid rgba(82, 242, 217, 0.38);
   background: rgba(4, 33, 38, 0.56);
   color: #ddfff9;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -689,7 +738,7 @@ p {
 .project-detail-lead {
   margin: 0;
   color: #dcfff9;
-  font-family: 'Sora', 'Avenir Next', sans-serif;
+  font-family: "Sora", "Avenir Next", sans-serif;
   font-size: 1.06rem;
 }
 
@@ -788,10 +837,6 @@ p {
 @media (max-width: 900px) {
   section {
     padding: 1.5rem;
-  }
-
-  .work-items-row {
-    grid-template-columns: 1fr;
   }
 
   .profile-image {
