@@ -844,6 +844,10 @@ strong {
     height: 170px;
   }
 
+  .work-items-row {
+    grid-template-columns: 1fr;
+  }
+
   .help-grid {
     grid-template-columns: 1fr;
   }
