@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import type { ProjectRecord } from '@/types/projects';
 import { BackButton } from './BackButton';
+import { ProjectCarousel } from './ProjectCarousel';
 
 const renderInline = (text: string): ReactNode[] => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -87,19 +88,7 @@ export function ProjectDetail({ project }: Props) {
           )}
 
           {project.images.length > 0 && (
-            <div className="project-carousel" aria-label="Project images">
-              {project.images.map((image) => {
-                const extension = image.ext ?? 'jpg';
-                const fullPath = `/img/prj/${image.name}.${extension}`;
-
-                return (
-                  <figure key={`${image.name}-${image.title}`} className="project-carousel-item">
-                    <img src={fullPath} alt={image.title} loading="lazy" />
-                    <span>{image.title}</span>
-                  </figure>
-                );
-              })}
-            </div>
+            <ProjectCarousel images={project.images} />
           )}
         </article>
       </div>
