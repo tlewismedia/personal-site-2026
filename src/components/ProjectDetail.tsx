@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { ProjectRecord } from '@/types/projects';
 import { BackButton } from './BackButton';
-import { ProjectCarousel } from './ProjectCarousel';
+import { ProjectImages } from './ProjectImages';
 
 const renderInline = (text: string): ReactNode[] => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -88,7 +88,7 @@ export function ProjectDetail({ project }: Props) {
           )}
 
           {project.images.length > 0 && (
-            <ProjectCarousel images={project.images} />
+            <ProjectImages images={project.images} />
           )}
         </article>
       </div>
