@@ -25,6 +25,7 @@
       ],
       "gallery": [
         { "type": "image", "name": "starling", "title": "Starling Data", "ext": "webp" },
+        { "type": "image", "name": "starling1", "title": "Starling Data", "ext": "webp" },
         {
           "type": "markdown",
           "name": "how-it-works",
@@ -34,13 +35,7 @@
           "type": "markdown",
           "name": "ingestion-architecture",
           "title": "Ingestion Architecture"
-        },
-        {
-          "type": "markdown",
-          "name": "runtime-query-flow",
-          "title": "Query → Answer Flow"
-        },
-        { "type": "image", "name": "starling1", "title": "Starling Data", "ext": "webp" }
+        }
       ]
     },
     {
