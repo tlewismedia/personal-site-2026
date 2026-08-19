@@ -1,20 +1,20 @@
 'use client';
 
-import type { ProjectImage } from '@/types/projects';
+import type { ProjectGalleryItem } from '@/types/projects';
 import { useMediaQuery } from '@/lib/useMediaQuery';
 import { ProjectCarousel } from './ProjectCarousel';
 import { ProjectImageList } from './ProjectImageList';
 
 type Props = {
-  images: ProjectImage[];
+  gallery: ProjectGalleryItem[];
 };
 
-export function ProjectImages({ images }: Props) {
+export function ProjectImages({ gallery }: Props) {
   const isMobile = useMediaQuery('(max-width: 640px)');
 
   return isMobile ? (
-    <ProjectImageList images={images} />
+    <ProjectImageList gallery={gallery} />
   ) : (
-    <ProjectCarousel images={images} />
+    <ProjectCarousel gallery={gallery} />
   );
 }

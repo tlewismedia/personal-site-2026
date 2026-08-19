@@ -87,8 +87,8 @@ export function ProjectDetail({ project }: Props) {
             </ul>
           )}
 
-          {project.images.length > 0 && (
-            <ProjectImages images={project.images} />
+          {project.gallery.length > 0 && (
+            <ProjectImages gallery={project.gallery} />
           )}
         </article>
       </div>

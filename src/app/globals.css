@@ -144,6 +144,7 @@ strong {
   display: grid;
   gap: 1rem;
   justify-items: center;
+  margin-bottom: 100px;
 }
 
 .profile-image {
@@ -827,7 +828,7 @@ strong {
 .project-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(320px, 78vw);
+  grid-auto-columns: minmax(298px, 78vw);
   align-items: start;
   gap: 1rem;
   overflow-x: auto;
@@ -902,6 +903,212 @@ strong {
 .project-carousel-item img:hover {
   border-color: rgba(82, 242, 217, 0.5);
   transform: translateY(-2px);
+}
+
+.project-chart-preview {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(82, 242, 217, 0.22);
+  background: rgba(4, 33, 38, 0.45);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+.project-chart-preview:hover {
+  border-color: rgba(82, 242, 217, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-chart-preview .project-markdown-body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-chart-preview .project-mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.project-chart-preview .project-mermaid svg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.project-chart-preview,
+.project-chart-preview * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-chart-preview ::-webkit-scrollbar {
+  display: none;
+}
+
+
+.project-chart-fade {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 96px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 42, 48, 0),
+    rgba(6, 42, 48, 0.35) 55%,
+    #062a30 100%
+  );
+  border-radius: 0 0 12px 12px;
+}
+
+.project-markdown-body {
+  display: grid;
+  gap: 0.9rem;
+  max-width: none;
+  overflow: hidden;
+}
+
+.project-markdown-body > * {
+  max-width: none;
+}
+
+.project-markdown-body h1,
+.project-markdown-body h2,
+.project-markdown-body h3,
+.project-markdown-body h4 {
+  margin: 0.4rem 0 0;
+  color: #f0fffc;
+}
+
+.project-markdown-body h1 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+}
+
+.project-markdown-body h2 {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+
+.project-markdown-body h3 {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+}
+
+.project-markdown-body p {
+  margin: 0;
+  max-width: none;
+  color: var(--text-secondary);
+  font-size: clamp(0.98rem, 1.25vw, 1.05rem);
+  line-height: 1.72;
+}
+
+.project-markdown-body ul,
+.project-markdown-body ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.project-markdown-body li {
+  margin: 0.25rem 0;
+}
+
+.project-markdown-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(82, 242, 217, 0.4);
+}
+
+.project-markdown-body a:hover {
+  color: #dcfff9;
+  border-bottom-color: rgba(220, 255, 249, 0.65);
+}
+
+.project-markdown-body strong {
+  color: #fff;
+}
+
+.project-markdown-body hr {
+  margin: 0.35rem 0;
+  border: 0;
+  border-top: 1px solid rgba(82, 242, 217, 0.2);
+}
+
+.project-markdown-body pre {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(82, 242, 217, 0.18);
+  background: rgba(2, 18, 22, 0.7);
+  color: #d7fff9;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.project-markdown-body code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.86em;
+}
+
+.project-markdown-body :not(pre) > code {
+  padding: 0.12em 0.35em;
+  border-radius: 6px;
+  background: rgba(82, 242, 217, 0.14);
+  color: #d7fff9;
+}
+
+.project-markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.project-markdown-body th,
+.project-markdown-body td {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgba(82, 242, 217, 0.18);
+  text-align: left;
+  vertical-align: top;
+}
+
+.project-markdown-body th {
+  background: rgba(82, 242, 217, 0.1);
+  color: #eafffa;
+  font-weight: 600;
+}
+
+.project-markdown-body td {
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.project-markdown-body blockquote {
+  margin: 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 3px solid rgba(82, 242, 217, 0.5);
+  color: var(--text-secondary);
+}
+
+.project-mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem 0;
+  overflow-x: auto;
+}
+
+.project-mermaid svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .lightbox-overlay {
@@ -1016,6 +1223,36 @@ strong {
   text-align: center;
 }
 
+.lightbox-content {
+  width: min(92vw, 960px);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-chart {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(82, 242, 217, 0.28);
+  border-radius: 14px;
+  background: rgba(4, 33, 38, 0.6);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-chart .project-markdown-body {
+  overflow: visible;
+}
+
+.lightbox-chart-caption {
+  margin-top: 0.85rem;
+  color: #c6f4ed;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   section {
     padding: 1.5rem;
@@ -1062,6 +1299,19 @@ strong {
   .lightbox-image {
     max-width: 95vw;
     max-height: 75vh;
+  }
+
+  .lightbox-content {
+    width: 95vw;
+    max-height: 92vh;
+  }
+
+  .lightbox-chart {
+    padding: 1rem;
+  }
+
+  .project-chart-preview {
+    height: 260px;
   }
 
   .project-page {

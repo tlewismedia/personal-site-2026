@@ -22,6 +22,25 @@
       "images": [
         { "name": "starling", "title": "Starling Data", "ext": "webp" },
         { "name": "starling1", "title": "Starling Data", "ext": "webp" }
+      ],
+      "gallery": [
+        { "type": "image", "name": "starling", "title": "Starling Data", "ext": "webp" },
+        {
+          "type": "markdown",
+          "name": "how-it-works",
+          "title": "How It Works"
+        },
+        {
+          "type": "markdown",
+          "name": "ingestion-architecture",
+          "title": "Ingestion Architecture"
+        },
+        {
+          "type": "markdown",
+          "name": "runtime-query-flow",
+          "title": "Query → Answer Flow"
+        },
+        { "type": "image", "name": "starling1", "title": "Starling Data", "ext": "webp" }
       ]
     },
     {

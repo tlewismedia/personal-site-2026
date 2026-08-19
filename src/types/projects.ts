@@ -4,6 +4,26 @@ export type ProjectImage = {
   ext?: string;
 };
 
+export type ProjectMarkdownItem = {
+  type: 'markdown';
+  name: string;
+  title: string;
+  content: string;
+};
+
+export type ProjectImageItem = ProjectImage & {
+  type: 'image';
+};
+
+export type ProjectGalleryItem = ProjectImageItem | ProjectMarkdownItem;
+
+export type RawGalleryItem = {
+  type?: 'image' | 'markdown';
+  name: string;
+  title: string;
+  ext?: string;
+};
+
 export type ProjectRecord = {
   slug: string;
   title: string;
@@ -12,6 +32,7 @@ export type ProjectRecord = {
   link?: string;
   tech: string[];
   images: ProjectImage[];
+  gallery: ProjectGalleryItem[];
 };
 
 export type RawProjectRecord = {
@@ -21,6 +42,7 @@ export type RawProjectRecord = {
   link?: string;
   tech?: string[];
   images?: ProjectImage[];
+  gallery?: RawGalleryItem[];
 };
 
 // Server-compatible HTML entity decoder (no document/DOM required)
